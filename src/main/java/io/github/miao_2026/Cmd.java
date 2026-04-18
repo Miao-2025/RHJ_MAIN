@@ -1,4 +1,4 @@
-package io.github;
+package io.github.miao_2026;
 
 public abstract class Cmd {
     public String id;

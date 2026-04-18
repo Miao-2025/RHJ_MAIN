@@ -1,10 +1,10 @@
-package io.github;
+package io.github.miao_2026;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import java.io.File;
 import java.io.IOException;
 
-import static io.github.LoadCommand.registerPrintCommand;
+import static io.github.miao_2026.LoadCommand.registerPrintCommand;
 
 public class RHJ_MAIN extends JavaPlugin {
     @Override
