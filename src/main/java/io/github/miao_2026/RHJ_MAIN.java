@@ -4,7 +4,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.File;
 import java.io.IOException;
 
-import static io.github.miao_2026.LoadCommand.registerPrintCommand;
+import static io.github.miao_2026.LoadCommand.registerAllCommands;
 
 public class RHJ_MAIN extends JavaPlugin {
     @Override
@@ -12,7 +12,7 @@ public class RHJ_MAIN extends JavaPlugin {
         for(int _i=0;_i<10;_i++){
             System.out.println("上");
         }
-        registerPrintCommand();
+        registerAllCommands();
         File test = new File("test.json");
         try {
             PluginManager.regRunEvent(test);
