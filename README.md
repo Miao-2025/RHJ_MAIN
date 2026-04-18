@@ -8,31 +8,24 @@
 - **事件驱动**：提供了一种机制，允许在特定事件发生时执行预设的代码块（例如，当插件被加载或卸载时）。
 
 ## JSON配置文件示例
-以下是一个简单的JSON配置文件示例，展示了如何定义一个插件及其命令：``` json
+以下是一个简单的JSON配置文件示例，展示了如何定义一个插件及其命令：
 {
   "name": "MyFirstPlugin",
   "codes": [
     {
       "id": "MAIN",
       "Commands": [
-        {
-          "id": "print",
-          "args": [
-            { "Type": "String", "v": "Hello, World!" }
-          ]
-        },
-        {
-          "id": "setvar",
-          "args": [
-            { "Type": "String", "v": "myVar" },
-            { "Type": "String", "v": "Some Value" }
-          ]
+        {"id": "set",
+          "args": [{"Type":"String","v": "a"},{"Type":"String","v": "b"}]
+        },{
+          "id":"print",
+          "args": [{"Type": "Value", "v": "a"}]
         }
       ]
     }
+
   ]
 }
-```
 
 关键字段解释
 name: 插件名称，必须唯一。
