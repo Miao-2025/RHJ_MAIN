@@ -7,33 +7,30 @@
 - **命令处理**：每个命令都关联一个具体的处理器（继承自类），该处理器负责实现命令的具体逻辑。 `Cmd`
 - **事件驱动**：提供了一种机制，允许在特定事件发生时执行预设的代码块（例如，当插件被加载或卸载时）。
 
-## JSON配置文件示例
-以下是一个简单的JSON配置文件示例，展示了如何定义一个插件及其命令：
+## JSON 配置文件示例
+以下是一个简单的JSON配置文件示例，展示了如何定义一个插件及其命令：``` json
 {
-  "name": "MyFirstPlugin",
-  "codes": [
-    {
-      "id": "MAIN",
-      "Commands": [
-        {"id": "set",
-          "args": [{"Type":"String","v": "a"},{"Type":"String","v": "b"}]
-        },{
-          "id":"print",
-          "args": [{"Type": "Value", "v": "a"}]
-        }
-      ]
-    }
-
-  ]
+"name": "MyFirstPlugin",
+"codes": [
+{
+"id": "MAIN",
+"Commands": [
+{"id": "set",
+"args": [{"Type":"String","v": "a"},{"Type":"String","v": "b"}]\
+},{
+"id":"print",
+"args": [{"Type": "Value", "v": "a"}]
+}
+]
 }
 
+]
+}
+```
 关键字段解释
 name: 插件名称，必须唯一。
 codes: 包含一系列代码块，每个代码块由id标识，并包含一个或多个命令。
-Commands: 每个命令指定其ID以及参数列表。参数列表是Value对象数组，其中Type指定了参数类型，而v则是实际的值。
-建议使用的命令
-这里列出几个建议你在LoadCommand类中实现的命令，以便于更好地演示本项目的功能：
-print: 打印一条消息到控制台。这个命令已经在LoadCommand.registerPrintCommand()方法中实现了。
-setvar: 设置变量的值。你可以创建一个新的Cmd实例来实现这一功能。
-getvar: 获取变量的值并打印出来。同样地，这需要一个新的Cmd子类来完成。
+Commands: 每个命令指定其id以及参数列表。参数列表是Value对象数组，其中Type指定了参数类型，而v则是实际的值。
+print: 打印一条消息到控制台。
+set: 设置变量的值。
 请参考上述JSON配置文件的例子来测试这些命令的功能。希望这份文档能帮助你快速上手本项目！如果你有任何问题或建议，请随时联系我们。

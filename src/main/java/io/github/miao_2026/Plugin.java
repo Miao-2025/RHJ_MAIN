@@ -9,10 +9,6 @@ public class Plugin {
     public List<Code> codes=new CopyOnWriteArrayList<>();
 
 
-    // MAP字段的 Getter
-    public MAP getMAP() {
-        return MAP;
-    }
     public String getName() {
         return name;
     }
@@ -23,7 +19,7 @@ public class Plugin {
         return codes;
     }
 
-    public class Code {
+    public static class Code {
         public String getId() {
             return id;
         }
@@ -32,9 +28,5 @@ public class Plugin {
 
         // id字段的 Getter
 
-        // cmds字段的 Getter
-        public _cmd[] getCmds() {
-            return Commands;
-        }
     }
 }
