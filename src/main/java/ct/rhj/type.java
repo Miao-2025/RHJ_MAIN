@@ -1,4 +1,4 @@
-package io.github;
+package ct.rhj;
 /**
  * 因为考虑扩展 此类型废弃
  * 至于为什么不直接删掉 纯粹想用一下@Deprecated

@@ -1,4 +1,4 @@
-package io.github.miao_2026;
+package ct.rhj;
 
 public class _cmd {
     public String id="pass";

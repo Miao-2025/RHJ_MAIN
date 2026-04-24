@@ -1,4 +1,4 @@
-package io.github.miao_2026;
+package ct.rhj;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentSkipListMap;
@@ -18,9 +18,4 @@ public class MAP {
     public void set(String key, Value value) {
         vs.put(key, value);
     }
-
-    // 如果需要设置整个 Map 实例（需移除 final 修饰符）
-    // public void setMap(Map<String, Val> newMap) {
-    //     this.vs = newMap;
-    // }
 }

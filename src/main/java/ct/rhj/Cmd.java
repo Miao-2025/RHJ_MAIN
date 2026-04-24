@@ -1,4 +1,4 @@
-package io.github.miao_2026;
+package ct.rhj;
 
 public abstract class Cmd {
     public String id;
