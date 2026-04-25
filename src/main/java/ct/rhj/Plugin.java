@@ -25,7 +25,9 @@ public class Plugin {
         }
         String id;
         _cmd[] Commands;
-
+        public int size(){
+            return Commands.length;
+        }
         // id字段的 Getter
 
     }
