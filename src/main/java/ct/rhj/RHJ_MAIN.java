@@ -11,4 +11,8 @@ public class RHJ_MAIN extends JavaPlugin {
     public void onDisable() {
         PluginManager.onDisable();
     }
+    @Override
+    public void onLoad() {
+        LoadCommand.registerAllCommands();
+    }
 }
